@@ -3,7 +3,7 @@
 This script is based on the install script from André Schenkels (https://github.com/aschenkels-ictstudio/openerp-install-scripts)
 but goes a bit further and has been improved. This script will also give you the ability to define an xmlrpc_port in the .conf file that is generated under /etc/
 This script can be safely used in a multi-thrive code base server because the default Odoo port is changed BEFORE the Odoo is started.
-
+p
 ##### 1. Download the script:
 
 sudo wget https://raw.githubusercontent.com/u16052642/thrive_erp_install_script/divinlonji_thrive_ent1669/thrive1669_install.sh
