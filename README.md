@@ -11,8 +11,3 @@ sudo chmod +x thrive1669_install.sh
 
 sudo ./thrive1669_install.sh
 
-/etc/init.d/thrive1669-server restart
-/etc/init.d/thrive1669-server stop
-/etc/init.d/thrive1669-server start
-
-
