@@ -5,11 +5,13 @@ This script can be safely used in a multi-thrive code base server because the de
 
 
 ##### 1. Download the script:
-sudo wget https://github.com/u16052642/thrive_erp_install_script/blob/main/thrive1669_install.sh
+
+sudo wget https://raw.githubusercontent.com/u16052642/thrive_erp_install_script/main/thrive1669_install.sh
 
 sudo chmod +x thrive1669_install.sh
 
 sudo ./thrive1669_install.sh
+
 
 /etc/init.d/thrive1669-server restart
 
