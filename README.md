@@ -19,3 +19,9 @@ sudo ./thrive1669_install.sh
 
 /etc/init.d/thrive1669-server start
 
+
+sudo service thrive1669-server start
+
+sudo service thrive1669-server stop
+
+sudo service thrive1669-server restart
