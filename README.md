@@ -41,8 +41,11 @@ addons:
 when need to manually start restart or stop then use this command:
 
 sudo /etc/init.d/thrive1669-server restart
+
 sudo /etc/init.d/thrive1669-server stop
+
 sudo /etc/init.d/thrive1669-server start
+
 sudo /etc/init.d/thrive1669-server force-reload
 
 
@@ -51,6 +54,9 @@ tail -400f /var/log/thrive1669/thrive1669-server.log
 
 python addons: 
 sudo apt install python3-pandas -y
+
 sudo apt install python3-geopy -y
+
 sudo apt install python3-cachetools -y
+
 pip3 install pdfminer.six
