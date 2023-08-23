@@ -6,22 +6,51 @@ This script can be safely used in a multi-thrive code base server because the de
 
 ##### 1. Download the script:
 
+Thrive Bureau ERP
+open ports:
+8069-App
+8074 - logs
+
+For installation in VPS server use these three lines, in the end of the installation process, when asking for GitHub user id: then input your GitHub email then input your password, it will install thrive_bureau_erp.
+
+login to vps terminal then insert three lines then it will start automatically start the installation process
+
+sudo apt-get update -y
+sudo apt-get upgrade -y
+sudo apt -y install net-tools vim screen curl tcpdump sysstat wget telnet bmon htop mlocate
+
+step 1)
 sudo wget https://raw.githubusercontent.com/u16052642/thrive_erp_install_script/main/thrive1669_install.sh
 
+step 2)
 sudo chmod +x thrive1669_install.sh
 
+step 3)
 sudo ./thrive1669_install.sh
 
 
-/etc/init.d/thrive1669-server restart
-
-/etc/init.d/thrive1669-server stop
-
-/etc/init.d/thrive1669-server start
+after finishing installation you will see the (yourvpsip):8069 then you should provide the master password then use database name and user id and password
 
 
-sudo service thrive1669-server start
+vi /etc/thrive1669-server.conf
+addons:
+/thrive1669/custom/addons/new/finance,/thrive1669/custom/addons/new/hr,/thrive1669/custom/addons/new/inventory_mrp,/thrive1669/custom/addons/new/marketing,/thrive1669/custom/addons/new/miscellaneous,/thrive1669/custom/addons/new/productivity,/thrive1669/custom/addons/new/reporting,/thrive1669/custom/addons/new/sales,/thrive1669/custom/addons/new/services,/thrive1669/custom/addons/new/website
 
-sudo service thrive1669-server stop
 
-sudo service thrive1669-server restart
+
+when need to manually start restart or stop then use this command:
+
+sudo /etc/init.d/thrive1669-server restart
+sudo /etc/init.d/thrive1669-server stop
+sudo /etc/init.d/thrive1669-server start
+sudo /etc/init.d/thrive1669-server force-reload
+
+
+log file:
+tail -400f /var/log/thrive1669/thrive1669-server.log
+
+python addons: 
+sudo apt install python3-pandas -y
+sudo apt install python3-geopy -y
+sudo apt install python3-cachetools -y
+pip3 install pdfminer.six
